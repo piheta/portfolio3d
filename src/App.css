@@ -1,0 +1,13 @@
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Inconsolata', Helvetica, sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background-image: radial-gradient(rgb(20, 9, 30), #10020e);
+  margin: 0 auto;
+}

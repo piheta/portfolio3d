@@ -1,0 +1,8 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 2rem;
+    z-index: 999;
+    color: white;
+    user-select: none;
+  }
