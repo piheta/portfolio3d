@@ -1,5 +1,6 @@
 import './App.css'
 import { Canvas } from "@react-three/fiber"
+import { EffectComposer, Bloom, ToneMapping } from '@react-three/postprocessing'
 import { Suspense, useEffect, useState } from 'react'
 import DeskModel from './models/DeskModel'
 import RackModel from './models/RackModel'
@@ -18,6 +19,9 @@ function App() {
   const [showDialog, setShowDialog] = useState(false)
   const [showFooter, setShowFooter] = useState(true)
   const [mode, setMode] = useState(0)
+
+  const [levels, setLevels] = useState(8)
+  const [intensity, setIntensity] = useState(0.2)
 
   const handleDeskClick = () => {
     if (mode === 1) {
@@ -62,7 +66,6 @@ function App() {
       setShowFooter(false);
     }
     window.history.pushState({}, '', `/${mode}`);
-    console.log(mode);
   }, [mode]);
   
 
@@ -71,8 +74,12 @@ function App() {
       <Header />
       {showDialog && <Dialog mode={mode} />}
       <Canvas camera={{ position: [0, 0, 0], fov: 60 }}>
-        <directionalLight />
-        <ambientLight />
+        <directionalLight intensity={0.4} />
+        <ambientLight intensity={0.35} />
+        <EffectComposer disableNormalPass>
+          <Bloom mipmapBlur luminanceThreshold={1} levels={levels} intensity={intensity * 4} />
+          <ToneMapping />
+        </EffectComposer>
         <Suspense fallback={<LoadingScreen />}>
           <DeskModel onClick={handleDeskClick} pcOn={pcOn} />
           <RackModel onClick={handleRackClick} />

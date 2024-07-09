@@ -7,7 +7,7 @@ function ResearchTableModel({ onClick }) {
   const shadowTexture = useTexture('shadow.png');
 
   useEffect(() => {
-    materials['Tex_0010_11.dds'].color = new THREE.Color(0.3, 0.3, 0.27)
+    materials['Tex_0010_11.dds'].color = new THREE.Color(0.13, 0.13, 0.12)
   }, [scene]);
 
   return (

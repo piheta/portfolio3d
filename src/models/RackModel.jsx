@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import { useFrame } from "@react-three/fiber"
 
 function RackModel({ onClick }) {
-  const { scene, animations, materials } = useGLTF('tf.glb')
+  const { scene, animations, materials } = useGLTF('spytech.glb')
   const mixerRef = useRef()
   const shadowTexture = useTexture('shadow.png')  // Load the shadow texture
 
@@ -55,7 +55,7 @@ function RackModel({ onClick }) {
       <primitive
         object={scene}
         rotation={[0, Math.PI / 1.4, 0]}
-        position={[3.25, -1.25, 2]}
+        position={[6.4, -1.25, -0.5]}
         onClick={onClick}
       />
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[3.25, -1.25, 2]}>

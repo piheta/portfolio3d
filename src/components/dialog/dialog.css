@@ -25,6 +25,18 @@
 .back {
   position: absolute;
   bottom: 6rem;
+  cursor: pointer;
+}
+
+.navigation-buttons {
+  position: absolute;
+  bottom: 8rem;
+  cursor: pointer;
+  display: flex;
+}
+
+.navigation-buttons p {
+  margin-right: 1rem;
 }
 
 .noise {
