@@ -62,10 +62,25 @@ function App() {
     if (mode === 0) {
       setShowDialog(false);
       setShowFooter(true);
+      window.history.pushState({}, '', '/');
     } else {
       setShowFooter(false);
+      let path = '';
+      switch(mode) {
+        case 1:
+          path = 'programming';
+          break;
+        case 2:
+          path = 'cloud';
+          break;
+        case 3:
+          path = 'projects';
+          break;
+        default:
+          path = '';
+      }
+      window.history.pushState({}, '', `/${path}`);
     }
-    window.history.pushState({}, '', `/${mode}`);
   }, [mode]);
   
 

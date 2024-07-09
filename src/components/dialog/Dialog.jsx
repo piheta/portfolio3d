@@ -59,7 +59,6 @@ function Dialog({ mode }) {
               <>
                 <h1><span className="errorcode">Projects -</span> Smidle</h1> 
                 <br />
-                <p className="output">Project Description: Smidle - A Mythological Gods Guessing Game</p>
                 <p className="output">Smidle is a captivating word-guessing game inspired by Wordle, designed for Smite enthusiasts. Players guess the names of mythological gods from Smite, testing their knowledge and passion for the game.</p>
                 <p className="output">The game launched to great success, attracting <span style={{ color: 'yellow' }}>20,000 visitors</span> on its first day.</p>
                 <p className="output">Built with Svelte for the frontend and Java Spring Boot for the backend, Smidle offers a smooth, responsive experience.</p>
@@ -71,14 +70,20 @@ function Dialog({ mode }) {
               <>
                 <h1><span className="errorcode">Projects -</span> Private Cloud</h1> 
                 <br />
-                <p className="output">I developed a private cloud infrastructure using Kubernetes and Ansible. This project allowed me to understand the intricacies of cloud management and orchestration, providing a robust environment for deploying various applications efficiently.</p>
-              </>
+                <p className="output">In this project, I automated the setup of a private cloud using Ansible, Kubernetes and Alpine Linux. <a href="https://github.com/piheta/ansible_cloud" target="_blank">The script</a> sets up QEMU hypervisors and creates Kubernetes nodes.</p>
+  <p className='output'>It also installs Prometheus Node Exporter on all machines to monitor performance. Using Alpine Linux makes the system lightweight and secure.</p>
+  <p className='output'>I experimented with numerous versions of my private cloud, including Proxmox and OpenStack, but ultimately settled on this custom solution for its customizability and efficiency.</p>
+</>
             )}
             {page === 3 && (
               <>
                 <h1><span className="errorcode">Projects -</span> Warehouse System</h1> 
                 <br />
-                <p className="output">I designed and implemented a warehouse management system that streamlined inventory tracking and order processing. This system, built with React and Node.js, improved operational efficiency and reduced manual errors significantly.</p>
+                <p className="output">My bachelor <a href="https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/3076971" target="_blank">thesis</a> project involved the development of a comprehensive system for efficient product plucking in a warehouse setting.</p>
+                <p className='output'>Our application incorporated a unique concept where employees could simultaneously utilize voice and touch interfaces for seamless plucking operations.</p>
+                <p className='output'>The system consisted of a <a href="https://gitlab.com/IDATA-2900-Group-1/voice-pick-frontend" target="_blank">SwiftUI</a> interface, which supports both iPhone and WatchOS, and a robust <a href="https://gitlab.com/IDATA-2900-Group-1/voice-pick-backend" target="_blank">Spring Boot API</a> for backend operations.</p>
+                <p className='output'>Additionally, the app featured user authentication, speech recognition, text-to-speech, and warehouse management capabilities, making it a versatile tool for modern warehouses.</p>
+                <p className='output'>Overall, our bachelor thesis project was a significant achievement, both in terms of technical implementation and fulfilling the needs of warehouse employees. You can watch our <a href="https://www.youtube.com/watch?v=ldt2QxZ4jbU" target="_blank">demo</a>. </p>
               </>
             )}
             <div className="navigation-buttons">
