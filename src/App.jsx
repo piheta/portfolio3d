@@ -20,9 +20,6 @@ function App() {
   const [showFooter, setShowFooter] = useState(true)
   const [mode, setMode] = useState(0)
 
-  const [levels, setLevels] = useState(8)
-  const [intensity, setIntensity] = useState(0.2)
-
   const handleDeskClick = () => {
     if (mode === 1) {
       return
@@ -92,7 +89,7 @@ function App() {
         <directionalLight intensity={0.4} />
         <ambientLight intensity={0.35} />
         <EffectComposer disableNormalPass>
-          <Bloom mipmapBlur luminanceThreshold={1} levels={levels} intensity={intensity * 4} />
+          <Bloom mipmapBlur luminanceThreshold={1} levels={8} intensity={0.2 * 4} />
           <ToneMapping />
         </EffectComposer>
         <Suspense fallback={<LoadingScreen />}>

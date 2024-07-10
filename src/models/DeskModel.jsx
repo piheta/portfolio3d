@@ -3,7 +3,7 @@ import { useGLTF, useTexture } from '@react-three/drei'
 import * as THREE from 'three'
 
 function DeskModel({ onClick, pcOn }) {
-  const { scene, materials } = useGLTF('desk_mp1.glb')
+  const { scene, materials } = useGLTF('deskwebpcomp.glb')
   const shadowTexture = useTexture('shadow.png')
 
   useEffect(() => {

@@ -1,25 +1,25 @@
 .dialog {
-    position: fixed;
-    top: 25%;
-    right: 7rem;
-    z-index: 999;
-    width: 40rem;
-    height: 50%;
-    user-select: none;
-    border-width: 8px;
-    border-color: rgb(17, 17, 17);
-    border-style: solid;
-
-    background-color: #041607da;
-    /* background-image: radial-gradient(#11581E, #041607), url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Inconsolata', Helvetica, sans-serif;
-    font-size: 1rem;
-    color: rgba(128, 255, 128, 0.8);
-    text-shadow:
-        0 0 1ex rgba(51, 255, 51, 1),
-        0 0 2px rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 50%;
+  right: 3vw;
+  transform: translateY(-50%);
+  z-index: 999;
+  width: 90%;
+  max-width: 40rem;
+  height: min(90vh, 40rem);
+  user-select: none;
+  border-width: 8px;
+  border-color: rgb(17, 17, 17);
+  border-style: solid;
+  background-color: #041607da;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Inconsolata', Helvetica, sans-serif;
+  font-size: 1rem; /* base font size */
+  color: rgba(128, 255, 128, 0.8);
+  text-shadow:
+      0 0 1ex rgba(51, 255, 51, 1),
+      0 0 2px rgba(255, 255, 255, 0.8);
 }
 
 .back {
@@ -44,7 +44,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
+  background-image: url("static.webp");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
